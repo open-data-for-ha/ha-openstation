@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.3 (2026-11-04)
+
+- README: buttons that open the repository and the setup in Home Assistant, and a corrected
+  note on restarting after installing through the Marketplace.
+- Release tags no longer carry a `v` prefix, so they match the manifest version.
+
 ## 0.2.2 (2026-11-04)
 
 - Tested on Home Assistant 2026.11. The README covers installing through the Marketplace.

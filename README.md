@@ -29,15 +29,27 @@ Bahnhöfe außerhalb des Netzes der DB InfraGO ab.
 
 ### Marketplace (ab Home Assistant 2026.11)
 
+[![Repository im Marketplace öffnen](https://my.home-assistant.io/badges/marketplace_repository.svg)](https://my.home-assistant.io/redirect/marketplace_repository/?owner=open-data-for-ha&repository=ha-openstation&category=integration)
+
+Der Button öffnet das Repository in deinem Home Assistant. Installiere dort **Öffentliche
+Bahnhofsdaten**. Fordert Home Assistant einen Neustart an, führe ihn aus.
+
+Ohne Button:
+
 1. Öffne **Einstellungen > Marketplace** und wähle **Über Link hinzufügen**. Verbinde dich mit
    GitHub, falls du danach gefragt wirst.
 2. Gib `https://github.com/open-data-for-ha/ha-openstation` mit dem Typ **Integration** ein.
-3. Installiere **Öffentliche Bahnhofsdaten** und starte Home Assistant neu.
+3. Installiere **Öffentliche Bahnhofsdaten**. Fordert Home Assistant einen Neustart an, führe
+   ihn aus.
 
 Hast du die Integration schon über HACS installiert, übernimmt Home Assistant sie beim Update
 auf 2026.11 von selbst.
 
 ### HACS (Home Assistant 2026.10)
+
+[![Repository in HACS öffnen](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=open-data-for-ha&repository=ha-openstation&category=integration)
+
+Ohne Button:
 
 1. Öffne in HACS das Menü und wähle **Benutzerdefinierte Repositories** (**Custom
    repositories**).
@@ -52,7 +64,9 @@ Home-Assistant-Konfiguration und starte neu.
 
 ## Einrichtung
 
-Gehe zu **Einstellungen > Geräte & Dienste > Integration hinzufügen** und suche nach
+[![Einrichtung starten](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=openstation)
+
+Oder gehe zu **Einstellungen > Geräte & Dienste > Integration hinzufügen** und suche nach
 **Öffentliche Bahnhofsdaten** oder **OpenStation**. Wähle dann deine Bahnhöfe. Beim ersten
 Mal wird die Bahnhofsliste geladen, das kann eine Minute dauern.
 
@@ -198,14 +212,25 @@ not cover stations outside DB InfraGO's network.
 
 ### Marketplace (Home Assistant 2026.11 and newer)
 
+[![Open the repository in the Marketplace](https://my.home-assistant.io/badges/marketplace_repository.svg)](https://my.home-assistant.io/redirect/marketplace_repository/?owner=open-data-for-ha&repository=ha-openstation&category=integration)
+
+The button opens the repository in your Home Assistant. Install **Öffentliche Bahnhofsdaten**
+there. If Home Assistant asks for a restart, do it.
+
+Without the button:
+
 1. Open **Settings > Marketplace** and choose **Add from link**. Connect GitHub if asked.
 2. Enter `https://github.com/open-data-for-ha/ha-openstation` with the type **Integration**.
-3. Install **Öffentliche Bahnhofsdaten** and restart Home Assistant.
+3. Install **Öffentliche Bahnhofsdaten**. If Home Assistant asks for a restart, do it.
 
 If you already installed it through HACS, Home Assistant takes it over when you update to
 2026.11.
 
 ### HACS (Home Assistant 2026.10)
+
+[![Open the repository in HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=open-data-for-ha&repository=ha-openstation&category=integration)
+
+Without the button:
 
 1. In HACS, open the menu and choose **Custom repositories**.
 2. Add `https://github.com/open-data-for-ha/ha-openstation` with the type **Integration**.
@@ -218,7 +243,9 @@ and restart.
 
 ## Configuration
 
-Go to **Settings > Devices & services > Add integration** and search for
+[![Start the setup](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=openstation)
+
+Or go to **Settings > Devices & services > Add integration** and search for
 **Öffentliche Bahnhofsdaten** or **OpenStation**. Then pick your stations. The first run
 downloads the station list, which can take a minute.
 
