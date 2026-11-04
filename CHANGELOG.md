@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1 (2026-11-04)
+
+- German README, followed by the English one.
+
 ## 0.2.0 (2026-11-04)
 
 - Crossed-out icons for escalators and travelators out of service, and for their summary
