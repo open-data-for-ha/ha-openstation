@@ -1,6 +1,7 @@
 {
   "domain": "openstation",
   "name": "Öffentliche Bahnhofsdaten",
+  "categories": ["vehicles_transport.public_transport"],
   "codeowners": ["@open-data-for-ha"],
   "config_flow": true,
   "dependencies": ["frontend", "http"],
@@ -10,5 +11,5 @@
   "issue_tracker": "https://github.com/open-data-for-ha/ha-openstation/issues",
   "requirements": [],
   "single_config_entry": true,
-  "version": "0.2.1"
+  "version": "0.2.2"
 }

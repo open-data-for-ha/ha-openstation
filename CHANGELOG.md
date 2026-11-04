@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.2 (2026-11-04)
+
+- Tested on Home Assistant 2026.11. The README covers installing through the Marketplace.
+- Added the public transport category for browsing the Marketplace.
+
 ## 0.2.1 (2026-11-04)
 
 - German README, followed by the English one.
