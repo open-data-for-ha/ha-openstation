@@ -17,7 +17,7 @@ not cover stations outside DB InfraGO's network.
 
 ## Requirements
 
-- Home Assistant 2026.10 or newer
+- Home Assistant 2026.10.4 or newer
 - [HACS](https://hacs.xyz/) for the recommended installation
 - Internet access. No account or API key is needed.
 
