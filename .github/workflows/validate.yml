@@ -10,8 +10,10 @@ on:
 permissions:
   contents: read
 
+# Both jobs need Docker and the GitHub repository, so they only run on GitHub.
 jobs:
   hassfest:
+    if: github.server_url == 'https://github.com'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7.0.1
@@ -19,6 +21,7 @@ jobs:
       - uses: home-assistant/actions/hassfest@86d4564712fa02543c808e3a693dd04f9d3f8361
 
   hacs:
+    if: github.server_url == 'https://github.com'
     runs-on: ubuntu-latest
     steps:
       - uses: hacs/action@22.5.0
