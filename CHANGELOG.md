@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.0 (2026-11-04)
+
+- Crossed-out icons for escalators and travelators out of service, and for their summary
+  sensors.
+
 ## 0.1.0 (2026-11-04)
 
 First release.

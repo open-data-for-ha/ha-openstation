@@ -16,6 +16,14 @@ EQUIPMENT_KEYS = {
     EquipmentKind.TRAVELATOR: "travelator",
 }
 
+# Material Design Icons only has a crossed-out elevator, which icons.json uses. The
+# others come from frontend/icons.js. They cannot go into icons.json either, because
+# hassfest only allows mdi: icons there.
+OUT_OF_SERVICE_ICONS = {
+    EquipmentKind.ESCALATOR: f"{DOMAIN}:escalator-off",
+    EquipmentKind.TRAVELATOR: f"{DOMAIN}:travelator-off",
+}
+
 
 def summary_key(kind: EquipmentKind) -> str:
     """Return the translation and icon key of the summary sensor of a kind."""

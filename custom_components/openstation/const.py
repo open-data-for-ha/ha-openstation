@@ -7,6 +7,8 @@ DOMAIN: Final = "openstation"
 
 CONF_STATIONS: Final = "stations"
 
+ICONS_URL: Final = f"/{DOMAIN}/icons.js"
+
 # The feed advanced irregularly, 50 to 420 s apart, when measured, so this interval can
 # lag by a few minutes.
 DEFAULT_SCAN_INTERVAL: Final = 300

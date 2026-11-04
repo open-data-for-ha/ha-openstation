@@ -14,6 +14,7 @@ from .const import CONF_STATIONS
 from .coordinator import OpenStationConfigEntry, OpenStationCoordinator
 from .entity import (
     EQUIPMENT_KEYS,
+    OUT_OF_SERVICE_ICONS,
     OpenStationEntity,
     empty_station_unique_id,
     summary_key,
@@ -82,6 +83,7 @@ class OutOfServiceSensor(OpenStationEntity, SensorEntity):
         self._equipment = [item for item in station.equipment if item.kind == kind]
         self._attr_unique_id = summary_unique_id(station, kind)
         self._attr_translation_key = summary_key(kind)
+        self._attr_icon = OUT_OF_SERVICE_ICONS.get(kind)
 
     def _with_status(self, *states: FacilityState) -> list[Equipment]:
         status = self.coordinator.data.status

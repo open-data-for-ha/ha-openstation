@@ -15,7 +15,7 @@ from homeassistant.helpers.entity_platform import AddConfigEntryEntitiesCallback
 from .api import Equipment, FacilityState, Station
 from .const import CONF_STATIONS
 from .coordinator import OpenStationConfigEntry, OpenStationCoordinator
-from .entity import EQUIPMENT_KEYS, OpenStationEntity
+from .entity import EQUIPMENT_KEYS, OUT_OF_SERVICE_ICONS, OpenStationEntity
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -82,6 +82,11 @@ class EquipmentProblemSensor(OpenStationEntity, BinarySensorEntity):
         if self._status == FacilityState.AVAILABLE:
             return False
         return None
+
+    @property
+    def icon(self) -> str | None:
+        """Return the crossed-out icon if there is no mdi: one for this kind."""
+        return OUT_OF_SERVICE_ICONS.get(self._equipment.kind) if self.is_on else None
 
     @property
     def extra_state_attributes(self) -> dict[str, Any]:

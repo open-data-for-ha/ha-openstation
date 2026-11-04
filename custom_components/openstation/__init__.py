@@ -3,22 +3,44 @@
 from __future__ import annotations
 
 import logging
+from pathlib import Path
 
+from homeassistant.components.frontend import add_extra_js_url
+from homeassistant.components.http import StaticPathConfig
 from homeassistant.const import Platform
 from homeassistant.core import HomeAssistant
 from homeassistant.exceptions import ConfigEntryNotReady
-from homeassistant.helpers import device_registry as dr, entity_registry as er
+from homeassistant.helpers import (
+    config_validation as cv,
+    device_registry as dr,
+    entity_registry as er,
+)
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
+from homeassistant.helpers.typing import ConfigType
+from homeassistant.loader import async_get_integration
 
 from .api import OpenStationClient, OpenStationError
 from .catalog import StationCatalog
-from .const import CONF_STATIONS, DOMAIN
+from .const import CONF_STATIONS, DOMAIN, ICONS_URL
 from .coordinator import OpenStationConfigEntry, OpenStationCoordinator
 from .entity import station_unique_ids
 
 _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS: list[Platform] = [Platform.BINARY_SENSOR, Platform.SENSOR]
+
+CONFIG_SCHEMA = cv.config_entry_only_config_schema(DOMAIN)
+
+
+async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
+    """Serve the custom icons, once per run, as entries can reload."""
+    integration = await async_get_integration(hass, DOMAIN)
+    await hass.http.async_register_static_paths(
+        [StaticPathConfig(ICONS_URL, str(Path(__file__).parent / "frontend/icons.js"))]
+    )
+    # The version makes browsers fetch a new file after an update.
+    add_extra_js_url(hass, f"{ICONS_URL}?v={integration.version}")
+    return True
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: OpenStationConfigEntry) -> bool:

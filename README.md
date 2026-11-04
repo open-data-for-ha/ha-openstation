@@ -58,8 +58,8 @@ interval (60 to 3600 seconds, default 300).
 
 Attributes: `station`, `platforms`, `equipment_number` and `source_status`.
 
-Icons always show the type of equipment. Colors come from Home Assistant, which only
-marks out of service in red. For green when in service and gray when unknown, add a theme
+Icons always show the type of equipment and are crossed out when it is out of service.
+Colors come from Home Assistant, which only marks out of service in red. For green when in service and gray when unknown, add a theme
 and select it in your user profile:
 
 ```yaml
@@ -118,6 +118,9 @@ Station and status data comes from OpenStation by DB InfraGO AG, released under
 [CC0](https://creativecommons.org/publicdomain/zero/1.0/) and fetched from
 [Mobilithek](https://mobilithek.info/offers/930558234532405248). The code in this
 repository is under the MIT license.
+
+The crossed-out escalator and travelator icons are derived from
+[Material Design Icons](https://pictogrammers.com/library/mdi/) (Apache License 2.0).
 
 ## Disclaimer
 
