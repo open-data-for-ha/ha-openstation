@@ -1,0 +1,13 @@
+{
+  "domain": "openstation",
+  "name": "Öffentliche Bahnhofsdaten",
+  "codeowners": ["@open-data-for-ha"],
+  "config_flow": true,
+  "documentation": "https://github.com/open-data-for-ha/ha-openstation",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/open-data-for-ha/ha-openstation/issues",
+  "requirements": [],
+  "single_config_entry": true,
+  "version": "0.1.0"
+}

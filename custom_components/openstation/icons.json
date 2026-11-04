@@ -1,0 +1,32 @@
+{
+  "entity": {
+    "binary_sensor": {
+      "elevator": {
+        "default": "mdi:elevator-passenger",
+        "state": {
+          "on": "mdi:elevator-passenger-off"
+        }
+      },
+      "escalator": {
+        "default": "mdi:escalator"
+      },
+      "travelator": {
+        "default": "mdi:walk"
+      }
+    },
+    "sensor": {
+      "elevators_out_of_service": {
+        "default": "mdi:elevator-passenger-off"
+      },
+      "escalators_out_of_service": {
+        "default": "mdi:escalator"
+      },
+      "travelators_out_of_service": {
+        "default": "mdi:walk"
+      },
+      "monitored_equipment": {
+        "default": "mdi:information-outline"
+      }
+    }
+  }
+}

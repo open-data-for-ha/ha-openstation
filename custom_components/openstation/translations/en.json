@@ -1,0 +1,167 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Select stations",
+        "description": "Pick the stations whose elevators and escalators you want to monitor. The first start downloads the station list, which can take a minute.",
+        "data": {
+          "stations": "Stations"
+        },
+        "data_description": {
+          "stations": "Stations marked (0) have no monitored equipment in the source."
+        }
+      }
+    },
+    "error": {
+      "no_stations": "Select at least one station."
+    },
+    "abort": {
+      "cannot_connect": "Could not download the OpenStation data. Try again later.",
+      "single_instance_allowed": "This integration is already configured. Change the stations in its options."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Options",
+        "data": {
+          "stations": "Stations",
+          "scan_interval": "Polling interval"
+        },
+        "data_description": {
+          "scan_interval": "Seconds between status updates. The source updates irregularly, usually every one to seven minutes.",
+          "stations": "Stations marked (0) have no monitored equipment in the source."
+        }
+      }
+    },
+    "error": {
+      "no_stations": "Select at least one station."
+    },
+    "abort": {
+      "cannot_connect": "Could not download the OpenStation data. Try again later."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "elevator": {
+        "name": "Elevator {label}",
+        "state": {
+          "off": "In service",
+          "on": "Out of service"
+        },
+        "state_attributes": {
+          "station": {
+            "name": "Station"
+          },
+          "platforms": {
+            "name": "Platforms"
+          },
+          "equipment_number": {
+            "name": "Equipment number"
+          },
+          "source_status": {
+            "name": "Status in the source"
+          }
+        }
+      },
+      "escalator": {
+        "name": "Escalator {label}",
+        "state": {
+          "off": "In service",
+          "on": "Out of service"
+        },
+        "state_attributes": {
+          "station": {
+            "name": "Station"
+          },
+          "platforms": {
+            "name": "Platforms"
+          },
+          "equipment_number": {
+            "name": "Equipment number"
+          },
+          "source_status": {
+            "name": "Status in the source"
+          }
+        }
+      },
+      "travelator": {
+        "name": "Travelator {label}",
+        "state": {
+          "off": "In service",
+          "on": "Out of service"
+        },
+        "state_attributes": {
+          "station": {
+            "name": "Station"
+          },
+          "platforms": {
+            "name": "Platforms"
+          },
+          "equipment_number": {
+            "name": "Equipment number"
+          },
+          "source_status": {
+            "name": "Status in the source"
+          }
+        }
+      }
+    },
+    "sensor": {
+      "elevators_out_of_service": {
+        "name": "Elevators out of service",
+        "state_attributes": {
+          "out_of_service": {
+            "name": "Out of service"
+          },
+          "unknown": {
+            "name": "Status unknown"
+          },
+          "affected_platforms": {
+            "name": "Affected platforms"
+          },
+          "total": {
+            "name": "Total"
+          }
+        }
+      },
+      "escalators_out_of_service": {
+        "name": "Escalators out of service",
+        "state_attributes": {
+          "out_of_service": {
+            "name": "Out of service"
+          },
+          "unknown": {
+            "name": "Status unknown"
+          },
+          "affected_platforms": {
+            "name": "Affected platforms"
+          },
+          "total": {
+            "name": "Total"
+          }
+        }
+      },
+      "travelators_out_of_service": {
+        "name": "Travelators out of service",
+        "state_attributes": {
+          "out_of_service": {
+            "name": "Out of service"
+          },
+          "unknown": {
+            "name": "Status unknown"
+          },
+          "affected_platforms": {
+            "name": "Affected platforms"
+          },
+          "total": {
+            "name": "Total"
+          }
+        }
+      },
+      "monitored_equipment": {
+        "name": "Monitored equipment"
+      }
+    }
+  }
+}

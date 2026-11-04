@@ -1,0 +1,167 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Bahnhöfe auswählen",
+        "description": "Wähle die Bahnhöfe aus, deren Aufzüge und Rolltreppen überwacht werden sollen. Beim ersten Start wird die Bahnhofsliste heruntergeladen, das kann eine Minute dauern.",
+        "data": {
+          "stations": "Bahnhöfe"
+        },
+        "data_description": {
+          "stations": "Mit (0) markierte Bahnhöfe haben in der Quelle keine überwachten Anlagen."
+        }
+      }
+    },
+    "error": {
+      "no_stations": "Wähle mindestens einen Bahnhof aus."
+    },
+    "abort": {
+      "cannot_connect": "Die OpenStation-Daten konnten nicht geladen werden. Versuche es später erneut.",
+      "single_instance_allowed": "Diese Integration ist bereits eingerichtet. Ändere die Bahnhöfe in den Optionen."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Optionen",
+        "data": {
+          "stations": "Bahnhöfe",
+          "scan_interval": "Abfrageintervall"
+        },
+        "data_description": {
+          "scan_interval": "Sekunden zwischen zwei Statusabfragen. Die Quelle aktualisiert sich unregelmäßig, meist alle ein bis sieben Minuten.",
+          "stations": "Mit (0) markierte Bahnhöfe haben in der Quelle keine überwachten Anlagen."
+        }
+      }
+    },
+    "error": {
+      "no_stations": "Wähle mindestens einen Bahnhof aus."
+    },
+    "abort": {
+      "cannot_connect": "Die OpenStation-Daten konnten nicht geladen werden. Versuche es später erneut."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "elevator": {
+        "name": "Aufzug {label}",
+        "state": {
+          "off": "In Betrieb",
+          "on": "Außer Betrieb"
+        },
+        "state_attributes": {
+          "station": {
+            "name": "Bahnhof"
+          },
+          "platforms": {
+            "name": "Bahnsteige"
+          },
+          "equipment_number": {
+            "name": "Anlagennummer"
+          },
+          "source_status": {
+            "name": "Status in der Quelle"
+          }
+        }
+      },
+      "escalator": {
+        "name": "Rolltreppe {label}",
+        "state": {
+          "off": "In Betrieb",
+          "on": "Außer Betrieb"
+        },
+        "state_attributes": {
+          "station": {
+            "name": "Bahnhof"
+          },
+          "platforms": {
+            "name": "Bahnsteige"
+          },
+          "equipment_number": {
+            "name": "Anlagennummer"
+          },
+          "source_status": {
+            "name": "Status in der Quelle"
+          }
+        }
+      },
+      "travelator": {
+        "name": "Fahrsteig {label}",
+        "state": {
+          "off": "In Betrieb",
+          "on": "Außer Betrieb"
+        },
+        "state_attributes": {
+          "station": {
+            "name": "Bahnhof"
+          },
+          "platforms": {
+            "name": "Bahnsteige"
+          },
+          "equipment_number": {
+            "name": "Anlagennummer"
+          },
+          "source_status": {
+            "name": "Status in der Quelle"
+          }
+        }
+      }
+    },
+    "sensor": {
+      "elevators_out_of_service": {
+        "name": "Aufzüge außer Betrieb",
+        "state_attributes": {
+          "out_of_service": {
+            "name": "Außer Betrieb"
+          },
+          "unknown": {
+            "name": "Status unbekannt"
+          },
+          "affected_platforms": {
+            "name": "Betroffene Bahnsteige"
+          },
+          "total": {
+            "name": "Gesamt"
+          }
+        }
+      },
+      "escalators_out_of_service": {
+        "name": "Rolltreppen außer Betrieb",
+        "state_attributes": {
+          "out_of_service": {
+            "name": "Außer Betrieb"
+          },
+          "unknown": {
+            "name": "Status unbekannt"
+          },
+          "affected_platforms": {
+            "name": "Betroffene Bahnsteige"
+          },
+          "total": {
+            "name": "Gesamt"
+          }
+        }
+      },
+      "travelators_out_of_service": {
+        "name": "Fahrsteige außer Betrieb",
+        "state_attributes": {
+          "out_of_service": {
+            "name": "Außer Betrieb"
+          },
+          "unknown": {
+            "name": "Status unbekannt"
+          },
+          "affected_platforms": {
+            "name": "Betroffene Bahnsteige"
+          },
+          "total": {
+            "name": "Gesamt"
+          }
+        }
+      },
+      "monitored_equipment": {
+        "name": "Überwachte Anlagen"
+      }
+    }
+  }
+}
