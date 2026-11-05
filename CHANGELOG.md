@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.4 (2026-11-05)
+
+- README: installing starts with searching in the Marketplace or HACS, now that the
+  integration is in the default catalog. Adding it from a link stays as a fallback.
+
 ## 0.2.3 (2026-11-04)
 
 - README: buttons that open the repository and the setup in Home Assistant, and a corrected
